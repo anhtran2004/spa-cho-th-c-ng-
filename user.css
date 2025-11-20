@@ -1,0 +1,24 @@
+.user-index-info {
+  margin: 2rem 0;
+}
+
+.user-index-box {
+  margin: 1.4rem 0;
+  width: 100%;
+  display: flex;
+}
+
+.user-index-info-label {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  width: 100px;
+  opacity: 0.6;
+}
+
+.user-index-info-value {
+  font-size: 1.7rem;
+}
+
+.user-index-btn {
+  margin: 10px 0 20px;
+}
