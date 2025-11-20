@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./assets/img/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOG-ALLY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/user.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1180907593492716"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Block__Element--Modifier -->
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <!-- Header navbar -->
+                <nav class="header__navbar">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            <img class="header__logo-img" src="./assets/img/logot.png" alt="Ảnh logo">
+                        </a>
+                    </div>
+
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm Pet nhanh...">
+
+                            <!-- Search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Chó Husky giá rẻ</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Bột tăng cân cho cún</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">
+                                Trong shop
+                            </span>
+                            <i class="header__search-select-icon fa-solid fa-angle-down"></i>
+
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>Ngoài shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li id="nf1" class="header__notify-item header__notify-item--viewed"
+                                        onclick="showNotify(this.id)">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://yolo.vn/wp-content/uploads/2019/08/hinh-anh-cho-pomsky-dep-45.jpg"
+                                                alt="Ảnh chó" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Giống chó Pomsky đẹp nhất </span>
+                                                <span class="header__notify-descriotion">Pomsky mang một vẻ đẹp rất sang
+                                                    chảnh, làm điên đảo giới nhà giàu Châu Âu</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- 2 -->
+                                    <li id="nf2" class="header__notify-item header__notify-item--viewed"
+                                        onclick="showNotify(this.id)">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://vuipet.com/uploads/images/giong-cho/cho-bull-phap/cho-bull-phap-6.jpg"
+                                                alt="Ảnh chó" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Đặc điểm của giống chó Bull
+                                                    Pháp</span>
+                                                <span class="header__notify-descriotion">Chó Bull Pháp có kích thước
+                                                    không quá lớn nhưng rất vạm vỡ với thân hình rắn chắc, núc ních và
+                                                    dáng đi thẳng, nhẹ nhàng.</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- 3 -->
+                                    <li id="nf3" class="header__notify-item header__notify-item--viewed"
+                                        onclick="showNotify(this.id)">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://thudaumot.edu.vn/wp-content/uploads/2021/03/Ngoai-hinh-husky-1152x1536.jpg"
+                                                alt="Ảnh chó" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Ngoại hình Husky có gì nổi bật</span>
+                                                <span class="header__notify-descriotion">Husky có hai lớp lông dày và ấm
+                                                    để chống chọi lại mùa đông lạnh giá. Lớp lông cứng bên ngoài và lớp
+                                                    lông tơ mềm bên trong. </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="https://m.me/108853571545947?ref=WelcomeMessage" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-circle-question"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+
+                        <div class="header__navbar-wrap"></div>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+        <div class="grid__full-with header__category">
+            <nav class="category">
+                <ul class="category-list">
+                    <li class="category-item">
+                        <a href="#" class="category-item__link">THỨC ĂN CHO THÚ CƯNG</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-item__link">SHOP CÚN</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-item__link">SHOP MÈO</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-item__link">ĐỒ CHƠI & PHỤ KIỆN</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-item__link">HOT DEAL</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-item__link">TIN MỚI</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-item__link">LIÊN HỆ</a>
+                    </li>
+                    <!-- Header with search -->
+                    <div class="header-with-search">
+
+                        <!-- Cart layout -->
+                        <div class="header__cart">
+                            <div class="header__cart-wrap">
+                                <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                                <span class="header__cart-notice">3</span>
+
+                                <!-- No cart: header__cart-list--no-cart -->
+                                <div class="header__cart-list ">
+                                    <img src="./assets/img/no-cart.png" alt="giỏ hàng" class="header__cart-no-cart-img">
+                                    <span class="header__cart-list-no-cart-msg">
+                                        Chưa có sản phẩm
+                                    </span>
+
+                                    <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                    <ul class="header__cart-list-item">
+                                        <!-- cart item -->
+                                        <li class="header__cart-item">
+                                            <img src="https://petnhatrang.com/wp-content/uploads/2020/10/0_yP7NdX2wWQVilq1_.png"
+                                                alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Husky Siberian</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">10.000.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại hàng: Cún
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- 2 -->
+                                        <li class="header__cart-item">
+                                            <img src="https://www.petcity.vn/media/product/120_4881_273d936359313351ca14394efbd508fc.jpg"
+                                                alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Bulldog Adult 3kg</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">350.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-qnt">5</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại hàng: Thức ăn
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- 3 -->
+                                        <li class="header__cart-item">
+                                            <img src="https://www.petcity.vn/media/product/2143_royal_canin___maxi_adult_10kg.jpg"
+                                                alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Royal Canin - Maxi Adult 10kg
+                                                    </h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">1.160.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-qnt">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại hàng: Thức ăn
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="app_container">
+            <div class="grid">
+                <div class="user-index-wrapper">
+                    <h1 class="user-index-title">THÔNG TIN CÁ NHÂN</h1>
+                    <div class="user-index-info">
+                    </div>
+                    <div class="user-index-btn btn btn--primary">Cập Nhật Thông Tin</div>
+                </div>
+            </div>
+
+
+            <!-- show thông tin-->
+            <div class="grid">
+                <!------- show thông báo -------->
+                <!-- tb1  ok-->
+                <div id=" show__notify-nf1" class="show__notify-request">
+                    <div class="show__notify-content">
+                        <h1 class="show__notify-title-h1">Chó Pomsky: Nguồn gốc, giá bán, đặc điểm, cách chăm sóc
+                            (2020)</h1>
+                        <span class="show__notify-date">Ngày:03/04/2022 lúc 20:41PM</span>
+                        <p class="show__notify-description">Chó Pomsky là giống chó gì, đến từ nước nào, giá bán ra
+                            sao? Và cả đặc điểm, cách chăm sóc chó Pomsky nữa? Tất cả sẽ được Dog Paradise chia sẻ
+                            với bạn qua bài viết này.</p>
+                        <h2 class="show__notify-title-h2">Nguồn gốc của chó Pomsky</h2>
+                        <img class="show__notify-img"
+                            src="https://file.hstatic.net/1000238938/file/pomsky-puppies-picture-idw_e8de5dc73fd04d739a58b458bcd8e54b_grande.jpg"
+                            alt="ảnh chó">
+                        <p class="show__notify-description">
+                            Chó Pomsky có bố, mẹ là giống chó Husky và Pomeranian. Việc lai tạo hai giống chó có
+                            ngoại hình khá chênh lệch nhau về chiều cao, kích thước chỉ phổ biến trong vài năm trở
+                            lại đây. Chính vì vậy số lượng những chú chó Pomsky trên thế giới khá ít.
+                        </p>
+                        <img class="show__notify-img"
+                            src="https://file.hstatic.net/1000238938/file/258734-1600x1030-pomsky-breed-profile-temperament_58a55b636e8a4d71be593778717e2932_grande.jpg"
+                            alt="">
+                        <p class="show__notify-description">
+                            Nhưng vì Pomsky được thừa hưởng bộ lông tuyệt đẹp của Husky và dáng vẻ dễ thương, nhỏ
+                            nhắn, linh hoạt của chó Pomeranin; nên vẫn có đông đảo các fan "săn lùng" giống chó quý
+                            hiếm này. Và tất nhiên, khi đón bé Pomsky về, bạn cần có chế độ chăm sóc tỉ mỉ, cẩn thận
+                            vì bộ gene của Pomsky vẫn chưa được ổn định hoàn toàn.
+                        </p>
+                        <h1 class="show__notify-title">Đặc điểm kích thước, ngoại hình của chó Pomsky</h1>
+                        <img class="show__notify-img" class="show__notify-img"
+                            src="https://file.hstatic.net/1000238938/file/df78fe4ff64f5fd867458d9fcca62fc7_030d590f8edf438f9b9cecc03678698b_grande.jpg"
+                            alt="">
+                        <p class="show__notify-description">
+                            Không có sự thay đổi lớn về kích thước, với những con Pomsky trưởng thành xuất hiện ở
+                            đầu nhỏ hơn của những con chó cỡ trung bình có chiều cao từ 25 – 30 cm và nặng từ 20 –
+                            25 kg. Pomsky lớn hơn một con Pomeranian thuần chủng, chỉ nặng chưa đến 30 kg, nhưng vẫn
+                            đủ nhỏ để nằm trên đùi, không giống như một con Husky trưởng thành. Một số Pomsky được
+                            lai với Pomeranian thuần chủng để tạo ra những con chó nhỏ hơn. Mặc dù giống chó này vẫn
+                            còn đủ mới để phần lớn các Pomsky là hỗn hợp 50-50 của Husky và Pomeranian.
+                            Pomsky có bộ lông kép dày, giống như bố mẹ kéo xe trượt tuyết của chúng, khiến chúng rất
+                            phù hợp với khí hậu lạnh. Một số có lớp lông ngắn hơn, trong khi một số khác có lớp lông
+                            dài hơn. Màu lông thường theo màu đen và trắng điển hình - hoặc xám và trắng, nâu và
+                            trắng, đỏ và trắng hoặc xanh và trắng - hoa văn của husky nhưng cũng có thể là màu đen
+                            thuần khiết, trắng tinh khiết hoặc nâu như Pomeranian. Nhìn chung thì bạn sẽ chăm sóc
+                            cho bộ lông của Pomsky dễ dàng với mỹ phẩm dành riêng cho chó chuyên dụng.
+                        </p>
+                        <a class="show__notify-btn" href="https://www.facebook.com/Test-108853571545947/">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            Thích
+                        </a>
+                        <a class="show__notify-btn" href="https://www.facebook.com/Test-108853571545947/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            Chia sẽ
+                        </a>
+                        <h3 class="show__notify-title-h3">Liên hệ ngay tới số HOTLINE: 0815.999.999 để nhận được tư
+                            vấn và hướng dẫn đặt mua.</h3>
+                        <ul class="show__notify-infomation">
+                            <li>Store: 66 Duy Tân, TP.Đà Nẵng, VN</li>
+                            <li>Website: https://dogally.com</li>
+                            <li>Facebook: https://www.facebook.com/dogally/</li>
+                        </ul>
+                    </div>
+                    <div class="show__notify-end" style="padding-bottom: 10px;background-color: #F5F5F5;width: 100%;">
+                    </div>
+                </div>
+                <!-- tb2  ok-->
+                <div id="show__notify-nf2" class="show__notify-request">
+                    <div class="show__notify-content">
+                        <h1 class="show__notify-title-h1">Nguồn gốc, đặc điểm, giá chó Bull Pháp</h1>
+                        <span class="show__notify-date">Ngày:23/07/2021 lúc 09:20AM</span>
+                        <p class="show__notify-description">Chó Pomsky là giống chó gì, đến từ nước nào, giá bán ra
+                            sao? Và cả đặc điểm, cách chăm sóc chó Pomsky nữa? Tất cả sẽ được Dog Paradise chia sẻ
+                            với bạn qua bài viết này.</p>
+                        <h2 class="show__notify-title-h2">Nguồn gốc của chó Pomsky</h1>
+                            <img class="show__notify-img"
+                                src="https://file.hstatic.net/1000238938/file/pomsky-puppies-picture-idw_e8de5dc73fd04d739a58b458bcd8e54b_grande.jpg"
+                                alt="ảnh chó">
+                            <p class="show__notify-description">
+                                Chó Pomsky có bố, mẹ là giống chó Husky và Pomeranian. Việc lai tạo hai giống chó có
+                                ngoại hình khá chênh lệch nhau về chiều cao, kích thước chỉ phổ biến trong vài năm
+                                trở lại đây. Chính vì vậy số lượng những chú chó Pomsky trên thế giới khá ít.
+                            </p>
+                            <img class="show__notify-img"
+                                src="https://file.hstatic.net/1000238938/file/258734-1600x1030-pomsky-breed-profile-temperament_58a55b636e8a4d71be593778717e2932_grande.jpg"
+                                alt="">
+                            <p class="show__notify-description">
+                                Nhưng vì Pomsky được thừa hưởng bộ lông tuyệt đẹp của Husky và dáng vẻ dễ thương,
+                                nhỏ nhắn, linh hoạt của chó Pomeranin; nên vẫn có đông đảo các fan "săn lùng" giống
+                                chó quý hiếm này. Và tất nhiên, khi đón bé Pomsky về, bạn cần có chế độ chăm sóc tỉ
+                                mỉ, cẩn thận vì bộ gene của Pomsky vẫn chưa được ổn định hoàn toàn.
+                            </p>
+                            <h1 class="show__notify-title">Đặc điểm kích thước, ngoại hình của chó Pomsky</h1>
+                            <img class="show__notify-img" class="show__notify-img"
+                                src="https://file.hstatic.net/1000238938/file/df78fe4ff64f5fd867458d9fcca62fc7_030d590f8edf438f9b9cecc03678698b_grande.jpg"
+                                alt="">
+                            <p class="show__notify-description">
+                                Không có sự thay đổi lớn về kích thước, với những con Pomsky trưởng thành xuất hiện
+                                ở đầu nhỏ hơn của những con chó cỡ trung bình có chiều cao từ 25 – 30 cm và nặng từ
+                                20 – 25 kg. Pomsky lớn hơn một con Pomeranian thuần chủng, chỉ nặng chưa đến 30 kg,
+                                nhưng vẫn đủ nhỏ để nằm trên đùi, không giống như một con Husky trưởng thành. Một số
+                                Pomsky được lai với Pomeranian thuần chủng để tạo ra những con chó nhỏ hơn. Mặc dù
+                                giống chó này vẫn còn đủ mới để phần lớn các Pomsky là hỗn hợp 50-50 của Husky và
+                                Pomeranian.
+                                Pomsky có bộ lông kép dày, giống như bố mẹ kéo xe trượt tuyết của chúng, khiến chúng
+                                rất phù hợp với khí hậu lạnh. Một số có lớp lông ngắn hơn, trong khi một số khác có
+                                lớp lông dài hơn. Màu lông thường theo màu đen và trắng điển hình - hoặc xám và
+                                trắng, nâu và trắng, đỏ và trắng hoặc xanh và trắng - hoa văn của husky nhưng cũng
+                                có thể là màu đen thuần khiết, trắng tinh khiết hoặc nâu như Pomeranian. Nhìn chung
+                                thì bạn sẽ chăm sóc cho bộ lông của Pomsky dễ dàng với mỹ phẩm dành riêng cho chó
+                                chuyên dụng.
+                            </p>
+                            <a class="show__notify-btn" href="https://www.facebook.com/Test-108853571545947/">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                Thích
+                            </a>
+                            <a class="show__notify-btn" href="https://www.facebook.com/Test-108853571545947/">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Chia sẽ
+                            </a>
+                            <h3 class="show__notify-title-h3">Liên hệ ngay tới số HOTLINE: 0815.999.999 để nhận được
+                                tư vấn và hướng dẫn đặt mua.</h3>
+                            <ul class="show__notify-infomation">
+                                <li>Store: 66 Duy Tân, TP.Đà Nẵng, VN</li>
+                                <li>Website: https://dogally.com</li>
+                                <li>Facebook: https://www.facebook.com/dogally/</li>
+                            </ul>
+                    </div>
+                    <div class="show__notify-end" style="padding-bottom: 10px;background-color: #F5F5F5;width: 100%;">
+                    </div>
+                </div>
+                <!-- tb3  ok-->
+                <div id="show__notify-nf3" class="show__notify-request">
+                    <div class="show__notify-content">
+                        <h1 class="show__notify-title-h1">Những đặc điểm về ngoại hình và hành vi của giống chó
+                            Husky</h1>
+                        <span class="show__notify-date">Ngày:11/11/2022 lúc 22:08PM</span>
+                        <p class="show__notify-description">Chó Pomsky là giống chó gì, đến từ nước nào, giá bán ra
+                            sao? Và cả đặc điểm, cách chăm sóc chó Pomsky nữa? Tất cả sẽ được Dog Paradise chia sẻ
+                            với bạn qua bài viết này.</p>
+                        <h2 class="show__notify-title-h2">Nguồn gốc của chó Pomsky</h1>
+                            <img class="show__notify-img"
+                                src="https://file.hstatic.net/1000238938/file/pomsky-puppies-picture-idw_e8de5dc73fd04d739a58b458bcd8e54b_grande.jpg"
+                                alt="ảnh chó">
+                            <p class="show__notify-description">
+                                Chó Pomsky có bố, mẹ là giống chó Husky và Pomeranian. Việc lai tạo hai giống chó có
+                                ngoại hình khá chênh lệch nhau về chiều cao, kích thước chỉ phổ biến trong vài năm
+                                trở lại đây. Chính vì vậy số lượng những chú chó Pomsky trên thế giới khá ít.
+                            </p>
+                            <img class="show__notify-img"
+                                src="https://file.hstatic.net/1000238938/file/258734-1600x1030-pomsky-breed-profile-temperament_58a55b636e8a4d71be593778717e2932_grande.jpg"
+                                alt="">
+                            <p class="show__notify-description">
+                                Nhưng vì Pomsky được thừa hưởng bộ lông tuyệt đẹp của Husky và dáng vẻ dễ thương,
+                                nhỏ nhắn, linh hoạt của chó Pomeranin; nên vẫn có đông đảo các fan "săn lùng" giống
+                                chó quý hiếm này. Và tất nhiên, khi đón bé Pomsky về, bạn cần có chế độ chăm sóc tỉ
+                                mỉ, cẩn thận vì bộ gene của Pomsky vẫn chưa được ổn định hoàn toàn.
+                            </p>
+                            <h1 class="show__notify-title">Đặc điểm kích thước, ngoại hình của chó Pomsky</h1>
+                            <img class="show__notify-img" class="show__notify-img"
+                                src="https://file.hstatic.net/1000238938/file/df78fe4ff64f5fd867458d9fcca62fc7_030d590f8edf438f9b9cecc03678698b_grande.jpg"
+                                alt="">
+                            <p class="show__notify-description">
+                                Không có sự thay đổi lớn về kích thước, với những con Pomsky trưởng thành xuất hiện
+                                ở đầu nhỏ hơn của những con chó cỡ trung bình có chiều cao từ 25 – 30 cm và nặng từ
+                                20 – 25 kg. Pomsky lớn hơn một con Pomeranian thuần chủng, chỉ nặng chưa đến 30 kg,
+                                nhưng vẫn đủ nhỏ để nằm trên đùi, không giống như một con Husky trưởng thành. Một số
+                                Pomsky được lai với Pomeranian thuần chủng để tạo ra những con chó nhỏ hơn. Mặc dù
+                                giống chó này vẫn còn đủ mới để phần lớn các Pomsky là hỗn hợp 50-50 của Husky và
+                                Pomeranian.
+                                Pomsky có bộ lông kép dày, giống như bố mẹ kéo xe trượt tuyết của chúng, khiến chúng
+                                rất phù hợp với khí hậu lạnh. Một số có lớp lông ngắn hơn, trong khi một số khác có
+                                lớp lông dài hơn. Màu lông thường theo màu đen và trắng điển hình - hoặc xám và
+                                trắng, nâu và trắng, đỏ và trắng hoặc xanh và trắng - hoa văn của husky nhưng cũng
+                                có thể là màu đen thuần khiết, trắng tinh khiết hoặc nâu như Pomeranian. Nhìn chung
+                                thì bạn sẽ chăm sóc cho bộ lông của Pomsky dễ dàng với mỹ phẩm dành riêng cho chó
+                                chuyên dụng.
+                            </p>
+                            <a class="show__notify-btn" href="https://www.facebook.com/Test-108853571545947/">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                Thích
+                            </a>
+                            <a class="show__notify-btn" href="https://www.facebook.com/Test-108853571545947/">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Chia sẽ
+                            </a>
+                            <h3 class="show__notify-title-h3">Liên hệ ngay tới số HOTLINE: 0815.999.999 để nhận được
+                                tư vấn và hướng dẫn đặt mua.</h3>
+                            <ul class="show__notify-infomation">
+                                <li>Store: 66 Duy Tân, TP.Đà Nẵng, VN</li>
+                                <li>Website: https://dogally.com</li>
+                                <li>Facebook: https://www.facebook.com/dogally/</li>
+                            </ul>
+                    </div>
+                    <div class="show__notify-end" style="padding-bottom: 10px;background-color: #F5F5F5;width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Chân trang -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid_column-2-4">
+                        <h3 class="footer__heading">Chăm Sóc Khách Hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung Tâm Trợ Giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">DOG-ALLY mall</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng Dẫn Mua Hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-4">
+                        <h3 class="footer__heading">Giới Thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Giới Thiệu Về DOG-ALLY Việt Nam</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tuyển Dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều Khoản DOG-ALLY</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-4">
+                        <h3 class="footer__heading">Danh Mục</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Cửa Hàng Thú Cưng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Đồ Chơi & Phụ Kiện</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Thức Ăn Cho Thú Cưng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tin Khác</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-4">
+                        <h3 class="footer__heading">Theo Dõi Chúng Tôi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-instagram-square"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-tiktok"></i>
+                                    Tiktok
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-4">
+                        <h3 class="footer__heading">Vào Cửa Hàng Trên Ứng Dụng</h3>
+                        <div class="footer__dowlaod">
+                            <img src="/assets/img/qr_code.png" alt="Dowload QR" class="footer__dowlaod-qr">
+                            <div class="footer__dowlaod-apps">
+                                <a href="" class="footer__dowload-app-link">
+                                    <img src="/assets/img/google_play.png" alt="Google paly"
+                                        class="footer__dowload-app-img">
+                                </a>
+                                <a href="" class="footer__dowload-app-link">
+                                    <img src="/assets/img/app_store.png" alt="App store"
+                                        class="footer__dowload-app-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty DOG-ALLY</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./user.js"></script>
+</body>
+
+</html>
